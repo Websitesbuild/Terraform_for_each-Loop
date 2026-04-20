@@ -1,0 +1,6 @@
+resource "aws_instance" "VM-2" {
+  ami = "ami-0ec10929233384c7f"
+  instance_type = "t2.micro"
+  subnet_id = aws_subnet.subnet-1.id
+  vpc_security_group_ids = [ aws_security_group.amit-SG.id ]
+}
